@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4140cc2d79005a4d9875b23a2168750, type: 3}
+  m_Name: Sniper Rifle
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 770954576967704319, guid: e75dc7b21b348cd48bcca3e52b168942, type: 3}
+  Damage: 6
+  FireRate: 1
+  HitFXPrefabs: {fileID: 6970010705165676448, guid: e3cce61fa59a7c84e82be75ecb43b948, type: 3}
+  IsAutomatic: 0
+  CanZoom: 1
+  ZoomAmount: 10
+  ZoomRotationSpeed: 0.3
+  MagazineSize: 5
+  ammoType: 2
