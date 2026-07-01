@@ -1,7 +1,6 @@
 using System;
-using System.Linq;
-using Cinemachine;
 using StarterAssets;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Range(1, 9)]
     [SerializeField] int startingHealth = 9;
-    [SerializeField] CinemachineVirtualCamera deathVirtualCamera;
+    [SerializeField] CinemachineCamera deathVirtualCamera;
     [SerializeField] Transform weaponCamera;
     [SerializeField] Image[] shieldBars;
     [SerializeField] GameObject gameOverContainer;

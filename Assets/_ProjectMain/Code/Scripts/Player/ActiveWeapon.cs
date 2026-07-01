@@ -1,14 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using StarterAssets;
-using Cinemachine;
 using TMPro;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 
 public class ActiveWeapon : MonoBehaviour
 {
     [SerializeField] WeaponSO startingWeaponSO;
-    [SerializeField] CinemachineVirtualCamera playerFollowCamera;
+    [SerializeField] CinemachineCamera playerFollowCamera;
     [SerializeField] Camera weaponCamera;
     [SerializeField] GameObject zoomVignette;
     [SerializeField] TMP_Text ammoText;
@@ -35,7 +35,7 @@ public class ActiveWeapon : MonoBehaviour
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
         firstPersonController = GetComponentInParent<FirstPersonController>();
         animator = GetComponent<Animator>();
-        defaultFOV = playerFollowCamera.m_Lens.FieldOfView;
+        defaultFOV = playerFollowCamera.Lens.FieldOfView;
         defaultRotationSpeed = firstPersonController.RotationSpeed;
     }
     void Start() 
@@ -167,14 +167,14 @@ public class ActiveWeapon : MonoBehaviour
     }
     void ZoomIn()
     {
-        playerFollowCamera.m_Lens.FieldOfView = currentWeaponSO.ZoomAmount;
+        playerFollowCamera.Lens.FieldOfView = currentWeaponSO.ZoomAmount;
         weaponCamera.fieldOfView = currentWeaponSO.ZoomAmount;
         zoomVignette.SetActive(true);
         firstPersonController.SetRotationSpeed(currentWeaponSO.ZoomRotationSpeed);
     }
     void ZoomOut()
     {
-        playerFollowCamera.m_Lens.FieldOfView = defaultFOV;
+        playerFollowCamera.Lens.FieldOfView = defaultFOV;
         weaponCamera.fieldOfView = defaultFOV;
         zoomVignette.SetActive(false);
         firstPersonController.SetRotationSpeed(defaultRotationSpeed);

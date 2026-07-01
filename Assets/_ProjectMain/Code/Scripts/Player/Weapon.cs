@@ -1,5 +1,4 @@
-using Cinemachine;
-using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
